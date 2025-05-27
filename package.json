@@ -1,0 +1,19 @@
+{
+  "name": "run-short-node",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "bin": {
+    "run-short-node": "./dist/index.js"
+  },
+  "scripts": {
+    "clean": "rm -rf dist/*",
+    "prebuild": "npm run clean",
+    "build": "tsc",
+    "postbuild": "chmod +x dist/index.js"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.21",
+    "typescript": "~5.8.3"
+  }
+}
