@@ -10,10 +10,15 @@
     "clean": "rm -rf dist/*",
     "prebuild": "npm run clean",
     "build": "tsc",
-    "postbuild": "chmod +x dist/index.js"
+    "postbuild": "chmod +x dist/index.js",
+    "dockerize": "docker compose build app",
+    "test": "docker compose up --force-recreate --no-build --no-deps --exit-code-from test test",
+    "test:watch": "docker compose up --force-recreate --no-build --no-deps test",
+    "test:once": "docker compose up --force-recreate --no-build --no-deps test"
   },
   "devDependencies": {
     "@types/node": "^22.15.21",
-    "typescript": "~5.8.3"
+    "typescript": "~5.8.3",
+    "vitest": "^3.1.4"
   }
 }

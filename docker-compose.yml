@@ -1,0 +1,18 @@
+services:
+  app:
+    build:
+      context: .
+    image: run-short-node:test
+    profiles: ['build-only']
+
+  test:
+    image: run-short-node:test
+    volumes:
+      - ./src:/app/src
+      - ./test:/app/test
+    working_dir: /app
+    command: ['npx', 'vitest', '--watch']
+    tty: true
+    environment:
+      - NODE_ENV=testing
+      - IS_DOCKER=true
