@@ -11,14 +11,16 @@
     "prebuild": "npm run clean",
     "build": "tsc",
     "postbuild": "chmod +x dist/index.js",
-    "dockerize": "docker compose build app",
-    "test": "docker compose up --force-recreate --no-build --no-deps --exit-code-from test test",
-    "test:watch": "docker compose up --force-recreate --no-build --no-deps test",
-    "test:once": "docker compose up --force-recreate --no-build --no-deps test"
+    "build:docker": "docker build -t run-short-node:test .",
+    "test": "docker compose run --rm test",
+    "test:once": "docker compose run -T --rm test npx vitest run"
   },
   "devDependencies": {
     "@types/node": "^22.15.21",
     "typescript": "~5.8.3",
     "vitest": "^3.1.4"
+  },
+  "dependencies": {
+    "commander": "^14.0.0"
   }
 }

@@ -1,11 +1,8 @@
 services:
-  app:
+  test:
     build:
       context: .
-    image: run-short-node:test
-    profiles: ['build-only']
-
-  test:
+      dockerfile: Dockerfile
     image: run-short-node:test
     volumes:
       - ./src:/app/src
