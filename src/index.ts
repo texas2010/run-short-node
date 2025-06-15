@@ -42,7 +42,7 @@ program
     import(pathToFileURL(actionPath).href)
       .then((mod) => {
         if (typeof mod.default === 'function') {
-          mod.default(input);
+          console.log(mod.default(input));
         } else {
           console.error('No default export');
         }
