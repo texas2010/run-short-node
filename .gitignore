@@ -12,6 +12,20 @@ dist
 dist-ssr
 *.local
 
+# Ignore everything in shortcutActions/
+shortcutActions/*
+
+# But keep the folder itself
+!shortcutActions/
+!shortcutActions/.gitkeep
+
+# And keep exampleTemplate folder and its contents
+!shortcutActions/exampleTemplate/
+!shortcutActions/exampleTemplate/**
+!shortcutActions/exampleTemplateJson/
+!shortcutActions/exampleTemplateJson/**
+
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

@@ -1,6 +1,6 @@
 # Welcome to run-short-node 👋
 
-![Version](https://img.shields.io/badge/version-0.0.0-blue.svg?cacheSeconds=2592000)
+![Version](https://img.shields.io/badge/version-0.0.1-blue.svg?cacheSeconds=2592000)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/texas2010/run-short-node/LICENSE)
 
 > Use shell to run complex logic in the JavaScript for apple shortcuts
